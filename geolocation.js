@@ -8,8 +8,11 @@ navigator.geolocation.getCurrentPosition(function(position){
 	console.log(position.coords.longitude);
 });
 
-
-navigator.geolocation.getCurrentPosition(gotLocation);
+if(!navigator.geolocation){
+	navigator.geolocation.getCurrentPosition(gotLocation);
+} else {
+	displayError('Your browser doesn\'t support Geolocation.');
+}
 
 
 function gotLocation(currentPosition) {
@@ -30,4 +33,5 @@ function gotLocation(currentPosition) {
 
 function displayError(message) {
   $("#error").text(message).slideDown("slow");
+  $("#hud").hide();
 }
