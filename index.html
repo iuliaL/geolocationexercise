@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geolocation Demo</title>  
+  <meta name="viewport" content="initial-scale=0.60">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="error">You need JavaScript enabled for this application to work!</div>
+
+    <p id="hud">Aquiring Location
+      <br />
+      <img src="bar.gif" alt="Progress bar">
+    </p>
+
+
+  <div id="restaurants">
+  
+    <h1>Iulia's Favourite Destinations</h1>
+    <ul>
+        <li><span data-lat="35.6833" data-lon="139.6833">? km</span> Tokyo</li>
+        <li><span data-lat="47.3667" data-lon="8.5500">? km</span> Zurich</li>
+        <li><span data-lat="40.7127" data-lon="-74.0059">? km</span> NYC</li>
+      
+    </ul>
+
+</div>
+  
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="./distanceCalculator.js"></script>
+  <script src="./geolocation.js"></script>
+</body>
+</html>
